@@ -1,0 +1,47 @@
+# ===== 依赖 =====
+node_modules/
+
+# ===== Python 编译缓存 =====
+__pycache__/
+*.pyc
+
+# ===== 版权素材 / 大文件（绝不能进仓库）=====
+music/
+covers/
+models/
+
+# ===== 歌词：全部忽略（歌词文字是版权作品，不随仓库分发）=====
+lyrics/*.lrc
+lyrics/*.lrc.bak
+lyrics/*.zht.bak
+lyrics/*.txt
+# 说明：播放器会在首次运行时自动创建 lyrics/ 与其中的说明文件；
+# 使用者自己放入 .lrc 即可，无需随仓库提供任何歌词文本。
+# 若你确实想附一首演示歌词，把下面那行取消注释并改成你的文件名：
+# !lyrics/你的演示歌.lrc
+
+# ===== 对齐产出的中间文件 =====
+*.aligned.lrc
+*.aligned.lrc.report.json
+*.lrc.report.json
+_bestalign/
+_trash/
+
+# ===== 实验归档：保留目录结构与说明，忽略大体积中间结果 =====
+_lab/align-best/*.lrc
+_lab/*.lrc
+
+# ===== 日志 =====
+*.log
+_disco.err
+_disco.txt
+
+# ===== 备份与个人配置 =====
+_bk.html
+.idea/
+.vscode/
+
+# ===== 系统文件 =====
+Thumbs.db
+desktop.ini
+.DS_Store

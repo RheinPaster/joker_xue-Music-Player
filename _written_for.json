@@ -1,0 +1,82 @@
+{
+  "_note": "薛之谦「为他人创作」（他作词/作曲、由别的歌手演唱）的歌曲清单。来源：百度百科「薛之谦」词条的结构化模块 data-module-type=musicForOthers（标注共8首），外加《粉钻》一词条单独记载的条目。",
+  "_rule": "收录规则（用户定的）：只保留『薛之谦本人演唱过』或『用户手上有音频』的条目，其余移入 removed 留档，随时可以移回 songs 恢复。注意：removed 是历史留档，可能包含后来已改归「现场与翻唱」的曲目——《越来越》（已移入 LIVE_COVERS）、《粉钻》（已移入 LIVE_COVERS，他在「万兽之王」巡演唱过）就是这种情况，以 gen-songs.js 的 LIVE_COVERS 为准。",
+  "_sources": {
+    "baike_module": "https://wapbaike.baidu.com/item/%E8%96%9B%E4%B9%8B%E8%B0%A6/144417",
+    "粉钻": "https://wapbaike.baidu.com/item/%E7%B2%89%E9%92%BB/65020509",
+    "越来越": "https://www.baike.com/wikiid/7428897116720857124",
+    "我从没强求该散场了别告别": "https://wapbaike.baidu.com/item/%E6%88%91%E4%BB%8E%E6%B2%A1%E5%BC%BA%E6%B1%82%E8%AF%A5%E6%95%A3%E5%9C%BA%E4%BA%86%E5%88%AB%E5%91%8A%E5%88%AB/67271429",
+    "叮咚": "https://wapbaike.baidu.com/item/%E5%8F%AE%E5%92%9A/62763779",
+    "蜂": "https://wapbaike.baidu.com/item/%E8%9C%82/64971653"
+  },
+  "songs": [],
+  "removed": [
+    {
+      "title": "越来越",
+      "artist": "刘惜君",
+      "year": 2024,
+      "album": "音乐缘计划 第10期",
+      "sec": 232,
+      "credit": "词曲",
+      "source": "https://www.baike.com/wikiid/7428897116720857124",
+      "reason": "已改归「现场与翻唱」分类（见 gen-songs.js 的 LIVE_COVERS，带 original:\"刘惜君\" 标注），不再走「为他人创作」"
+    },
+    {
+      "title": "我从没强求该散场了别告别",
+      "artist": "王啸坤",
+      "year": 2026,
+      "sec": 265,
+      "credit": "作词",
+      "reason": "王啸坤演唱、薛之谦作词、王啸坤作曲；无薛之谦演唱版本，且用户无音频"
+    },
+    {
+      "title": "叮咚",
+      "artist": "王啸坤",
+      "year": 2023,
+      "sec": 247,
+      "credit": "作词",
+      "reason": "无薛之谦演唱版本，且用户无音频"
+    },
+    {
+      "title": "蜂",
+      "artist": "周深",
+      "year": 2024,
+      "sec": 180,
+      "credit": "作词",
+      "reason": "署名本身存疑——该歌曲自己的词条记作词郭冠廷、作曲李铢衔，未出现薛之谦；无薛之谦演唱版本，且用户无音频"
+    },
+    {
+      "title": "藏起我",
+      "artist": "刘维",
+      "year": 2023,
+      "sec": 0,
+      "credit": "作词",
+      "reason": "无薛之谦演唱版本，且用户无音频"
+    },
+    {
+      "title": "脏",
+      "artist": "陈冰",
+      "year": 2023,
+      "sec": 0,
+      "credit": "作词",
+      "reason": "无薛之谦演唱版本，且用户无音频"
+    },
+    {
+      "title": "第二道光",
+      "artist": "追光吧！哥哥 第11期",
+      "year": 2021,
+      "sec": 0,
+      "credit": "作词",
+      "reason": "演唱者未能确认；无薛之谦演唱版本，且用户无音频"
+    },
+    {
+      "title": "粉钻",
+      "artist": "戚薇",
+      "year": 2024,
+      "sec": 234,
+      "credit": "词曲",
+      "source": "https://wapbaike.baidu.com/item/%E7%B2%89%E9%92%BB/65020509",
+      "reason": "戚薇演唱、薛之谦词曲；无薛之谦演唱版本，且用户无音频"
+    }
+  ]
+}
