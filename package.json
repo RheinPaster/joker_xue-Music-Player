@@ -6,7 +6,10 @@
   "main": "main.js",
   "author": "RheinPaster",
   "license": "MIT",
-  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RheinPaster/joker_xue-Music-Player.git"
+  },
   "scripts": {
     "start": "electron .",
     "dev": "electron . --dev",

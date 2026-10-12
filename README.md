@@ -31,9 +31,23 @@
 
 ## 运行
 
+### 环境要求
+
+| 用途 | 需要什么 |
+| --- | --- |
+| **运行播放器** | Node.js 18+ 与 npm。**仅此而已。** |
+| **使用逐字对齐工具链** | 另有 Python 3.10+ 与若干第三方包，见 [requirements.txt](requirements.txt) |
+
+两者相互独立：**只跑播放器不需要装 Python 环境**；对齐工具链是离线批处理脚本，
+即使完全不装也能正常使用播放器的全部功能。
+
 ```bash
+# 播放器
 npm install
 npm start
+
+# 对齐工具链（可选）
+pip install -r requirements.txt
 ```
 
 Windows 下也可以直接双击 `start.bat`——它会自动切到脚本所在目录，
@@ -41,6 +55,7 @@ Windows 下也可以直接双击 `start.bat`——它会自动切到脚本所在
 
 > 首次运行会自动创建 `music/`、`covers/`、`lyrics/` 三个目录并写入使用说明。
 > 若 Electron 下载慢：`$env:ELECTRON_MIRROR="https://npmmirror.com/mirrors/electron/"` 后再 `npm install`。
+> 若使用 NVIDIA 显卡跑对齐，请安装 CUDA 版本的 torch（见 `requirements.txt` 末尾说明）。
 
 ## 技术要点
 

@@ -1,0 +1,46 @@
+# 逐字歌词对齐工具链的 Python 依赖
+#
+# 适用脚本：
+#   tools/align-lyrics.py      逐字对齐核心
+#   tools/align-all.py         批量对齐
+#   tools/best-align.py        两种配方择优
+#   tools/redo-low.py          低匹配率重跑
+#   tools/diagnose-align.py    对齐失败诊断
+#   tools/check-voice.py       人声性别判定
+#   tools/download-model.py    模型下载
+#   scripts/fix-lyrics-zh.py   繁转简
+#
+# 安装：
+#   pip install -r requirements.txt
+#
+# 注意：运行播放器本身（npm start）不需要这些依赖，
+#       只有使用逐字对齐工具链时才需要。
+
+# ---- 语音识别与对齐核心 ----
+faster-whisper>=1.0.0        # CTranslate2 后端的 Whisper 实现，支持词级时间戳
+demucs>=4.0.0                # 人声分离（--two-stems=vocals）
+torch>=2.0.0                 # 见下方说明
+torchaudio>=2.0.0            # 重采样
+
+# ---- 音频读取 ----
+soundfile>=0.12.0            # 直接读音频为 numpy，避免依赖 ffmpeg
+numpy>=1.24.0
+
+# ---- 工具 ----
+httpx>=0.24.0                # download-model.py 的 HTTP 客户端
+zhconv>=1.4.0                # fix-lyrics-zh.py 繁转简
+
+# ---------------------------------------------------------------------------
+# 关于 torch 与 GPU
+#
+# 上面的 torch 是 CPU 版本。使用 NVIDIA 显卡时，请按官方指引安装 CUDA 版本，
+# 例如 CUDA 12.x：
+#
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu121
+#
+# 若通过 pip 安装的是 nvidia-cublas-cu12 / nvidia-cudnn-cu12 形式的运行库，
+# tools/align-lyrics.py 里的 setup_cuda_dlls() 会自动把它们的目录加入
+# DLL 搜索路径（Windows 下 CTranslate2 需要这一步）。
+#
+# 无 NVIDIA 显卡时可用 --device cpu 运行，速度明显更慢。
+# ---------------------------------------------------------------------------

@@ -99,7 +99,7 @@ Electron 主进程 (main.js)
 
 | 文件 | 行数 | 职责 |
 | --- | --- | --- |
-| `scripts/gen-songs.js` | 399 | **从 `discography.json` 重新生成 `songs.js`。** 规则：以正式专辑/EP 为专辑单位、曲目顺序以 iTunes 官方为准、排除 Live / 综艺 / 翻唱 / 伴奏、不属于任何专辑的原创曲目归入「个人曲目」。**重跑时会保留原有 `id` 与原有歌词节选。** |
+| `scripts/gen-songs.js` | 399 | **从 `discography.json` 重新生成 `songs.js`。** 规则：以正式专辑/EP 为专辑单位、曲目顺序以 iTunes 官方为准、排除 Live / 综艺 / 翻唱 / 伴奏、不属于任何专辑的原创曲目归入「个人曲目」。**重跑时会保留原有 `id` 与原有歌词节选。** 输入还包括 `_written_for.json`——其中记录「由本人作词/作曲但由其他歌手演唱」的曲目，用于标注原唱。 |
 | `scripts/fetch-discography.js` | 91 | 从 iTunes 官方 API 拉取全部专辑与曲目，产出 `discography.json`。 |
 | `scripts/check-songs.js` | 46 | 数据自检：查重复 `id`、缺专辑 / 年份、专辑分组统计。 |
 | `scripts/verify-library.js` | 129 | 复查 `music/` 中每个音频匹配到了哪首歌、专辑年份是否正确、文件时长与曲目库相差多少。 |
